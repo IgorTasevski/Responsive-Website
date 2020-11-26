@@ -1,0 +1,857 @@
+html,body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'DIN - Light';
+  src: url('fonts/DINOT-Light.otf');
+}
+
+@font-face {
+  font-family: 'DIN Medium';
+  src: url('fonts/DIN-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'DINOT';
+  src: url('fonts/DINOT.otf');
+}
+
+@font-face {
+  font-family: 'Futura T';
+  src: url('fonts/futur.ttf')
+}
+
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT.ttf')
+}
+
+@font-face {
+  font-family: "Futura T - Book";
+  src: url('fonts/Futura-Book-font.ttf')
+}
+
+@font-face {
+  font-family: "DIN - Bold";
+  src: url('fonts/DINNextLTArabic-Bold.ttf')
+}
+
+.wrapper {
+  width: 96%;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+header {
+  background-color: #f6f6f6;
+  padding: 15px 0 30px 0;
+}
+
+.logo {
+  float: left;
+}
+
+#nav-bar {
+  float: right;
+  margin-right: 40px;
+}
+
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header span h2 {
+  line-height: 0;
+  margin: 0;
+  text-indent: -10000px;
+}
+
+header span li {
+ list-style-type: none;
+ float: left;
+ margin-left: 35px;
+ margin-top: 40px;
+}
+
+header span li a {
+  text-decoration: none;
+  color: #000000;;
+  font-family: 'Futura T', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px;
+  letter-spacing: 0.52px;
+  text-align: center;
+}
+
+.register-btn {
+  width: 166px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #e10921;
+  color: #e10921;
+  padding: 19px 26px;
+}
+
+header span li a:hover {
+  background-color: #9c9b9b;
+  color: white;
+}
+
+#red-bg {
+  background-color: #e10921;
+  padding: 82px 6% 50px 6%;
+}
+
+#black-bg {
+  background-color: #1e1e1e;
+}
+
+#hero-text {
+  color: #ffffff;
+  text-align: center;
+  margin: 0px 28px 0px 28px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+#hero-text h1 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1.53px;
+  text-transform: uppercase;  
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Futura T - Book";
+}
+
+#hero-text h2 {
+  margin-top: -10px;
+  padding: 0;
+  letter-spacing: 1.53px;
+  text-transform: uppercase; 
+  font-size: 30px;
+  font-weight: 700; 
+}
+
+/* General settings for h1, h2, h4, p */
+
+h1, h2 {
+  font-family: 'FuturaLT';
+}
+
+h4 {
+  font-family: "DIN Medium";
+  letter-spacing: 0.92px;
+  font-weight: 500;
+  line-height: 28.82px;
+  font-size: 22px;
+}
+
+p {
+  font-family: "DIN - Light";
+  letter-spacing: 0.77px;
+  font-weight: 300;
+  line-height: 28px;
+  font-size: 22px;
+}
+
+.slides {
+  margin: 0 5%;
+  height: 90%;
+  width: 90%;
+}
+
+#hero-slides {
+  background-color: #e10921;
+}
+
+/* Slideshow style */
+
+.current-slide {
+  display: inline-flex;
+  margin-top: 8%;
+  margin-left: 15%;
+}
+
+/* The dots/bullets/indicators */
+
+.dot-container {
+  display: absolute;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #e10921;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ffffff;
+}
+
+.mySlides {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 5% 0 3% 0;
+}
+
+.text {
+  background-color: white;
+  flex-grow: 1;
+  order: 1;
+  width: 50%;
+}
+
+.text h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Futura T";
+  letter-spacing: 1.34px;
+  color: #201d1e;
+  margin: 4% 15%;
+}
+
+.slide-text {
+  margin: 5% 25% 5% 15%;
+  font-size: 25px;
+  letter-spacing: 1.22px;
+  font-weight: 300;
+  line-height: 40.01px;
+}
+
+.h-line {
+  display: inline-block;
+  width: 400px;
+  border-bottom: 4px solid #c7c8ca;
+  margin-left: 20px;
+  margin-bottom: 42px;
+}
+
+.image {
+  flex-grow: 1;
+  order: 2;
+  width: 50%;
+}
+
+.slide-numbers {
+  font-weight: bold;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.active {
+  color: #e10921;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Styling the 94% hero fact with linear-gradient red and black */
+
+#hero-fact-bg {
+  background: linear-gradient(#e10921 50%, #1e1e1e 50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#hero-fact {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+  width: 60%;
+  margin-left: 20%;  
+  padding: 38px 0px 38px 32px;
+  height: auto;
+}
+
+#hero-fact-box {
+  background-color: #e10921;
+  border: 2px solid white;
+  outline: 13.5px solid #e10921;
+  float: left;
+  width: 186px;
+  height: 186px;
+  margin: 0px;
+}
+
+#hero-fact-number {
+  font-size: 109px;
+  font-family: 'Futura T', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  line-height: 105.47px;
+  text-transform: uppercase;
+  letter-spacing: 1.73px;
+  padding-top: 20px;
+}
+
+#hero-fact-number-text {
+  font-size: 29px;
+  font-family: 'Futura T', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+  margin: 0 0 0 0;
+}
+
+#hero-fact-text {
+  margin: 0px 63px 0px 230px;
+  padding: 0px 0px 0px 0px;
+  height: 100%;
+}
+
+#hero-fact-text h1 {
+  display: inline;
+  text-transform: uppercase;
+  color: #e10921;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 1.73px;
+}
+
+#hero-fact-text p {
+  /* display: inline; */
+  font-family: 'DINOT';
+  color: #252525;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.88px;
+  line-height: 22px;
+}
+
+#hero-fact-text .smalltext {
+  font-family: 'DINOT';
+  color: #9c9b9b;
+  font-size: 11px;
+  letter-spacing: 0.54px;
+  line-height: 15px;
+}
+
+/* Style for the register form */
+
+#register-text {
+  padding-top: 90px;
+  text-align: center;
+  margin: 0 25%;
+  color: #f4f4f4;
+}
+
+#register-text h1 {
+  letter-spacing: 1.53px;
+  text-transform: uppercase;  
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Futura T - Book";
+}
+
+#register-text h2 {
+  letter-spacing: 1px;
+  margin-top: -25px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#register-text h4 {
+  font-family: "DIN - Bold";
+  font-weight: 700;
+  letter-spacing: 0.77px;
+}
+
+#my-form {
+  padding-top: 40px;
+  text-align: center;
+  margin: 0 25%;
+  color: #f4f4f4;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  outline: 0;
+  background-color: #1e1e1e;
+  border-width: 0 0 3px;
+  border-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+button {
+  margin: 40px 0 96px 0;
+  background-color: #1e1e1e;
+  width: 166px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #ffffff;;
+  color: #ffffff;
+  padding: 0px;
+}
+
+.sign-up-btn:hover {
+  cursor: pointer;
+  background-color: #e10921;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+input, select, textarea{
+  color: #f4f4f4;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Style for the current form */
+
+input:focus::-webkit-input-placeholder {
+  color: #e10921;
+}
+
+input:focus {
+  border-color: #e10921;
+}
+
+textarea:focus {
+  border-color: #e10921;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: #e10921;
+}
+
+/* Style for the resource center */
+
+#resource-bg {
+  background-color: #f2f2f2;
+}
+
+#discover-more {
+  padding-top: 40px;
+  text-align: center;
+  margin: 0 26%;
+}
+
+#discover-more h1 {
+  margin-top: 0px;
+  padding-top: 30px;
+  font-family: "Futura T - Book";
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.53px;
+}
+
+#discover-more h2 {
+  margin-top: -30px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.53px;
+  text-transform: uppercase;
+}
+
+#resource-icons {
+  margin-top: 70px;
+}
+
+#first-row {
+  width: 100%;
+  margin: 0 22%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Style for the images/icons - first and second row */
+
+.grid-display {
+  float: left;
+  height: auto;
+  width: 14%;
+}
+
+#resource-icons h3 {
+  font-family: 'Futura T', sans-serif;
+  color: #e10921;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.77px;
+}
+
+#resource-icons a {
+text-decoration: none;
+font-family: "DIN - Bold";
+font-weight: 700;
+letter-spacing: 0.77px;
+color: #000000;
+font-size: 17px;
+}
+
+#second-row {
+  width: 100%;
+  margin: 0 29%;
+  padding: 50px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Style for the footer */
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #161616;
+  color: white;
+  text-align: center;
+  font-family: "DIN";
+  font-size: 15px;
+  font-weight: 300;  
+}
+
+.footer p {
+  padding-top: 25px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {font-size: 11px}
+}
+
+/* Responsive for mobile */
+
+@media screen and (max-width: 380px) {
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1, h2 {
+  font-family: 'Futura T', sans-serif;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: "DIN Medium";
+  font-size: 11px;
+}
+
+p {
+  font-family: "DIN - Light";
+  font-size: 12px;
+  line-height: normal;
+}
+
+header span {
+  padding: 25px;
+}
+
+header span ul {
+  margin-top: -60px;
+}
+
+header span li{
+  list-style-type: none;
+  float: left;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+}
+
+.register-btn {
+  border: none;
+}
+
+header  {
+  padding: 0;
+}
+
+header .logo #nav-bar {
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+#display-menu {
+  float: right;
+  width: 40px;
+  height: 40px;
+  background: url(images/4-layers.png) no-repeat 95% center;
+  cursor: pointer;
+  padding-top: 90px;
+}
+
+.logo #nav-bar {
+  background-color: #ffffff;
+}
+
+#red-bg {
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+#hero-text {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#hero-text h1 {
+  font-size: 20px;
+  letter-spacing: 0;
+  padding: 0 50px;
+}
+
+#hero-text h2 {
+  font-size: 20px;
+  letter-spacing: 0;
+  padding: 0 10px;
+  margin-top: 3px;
+}
+
+#hero-text p {
+  padding: 0 29px;
+}
+
+#hero-text h4 {
+  padding: 0 50px;
+  line-height: normal;
+}
+
+.mySlides {
+  flex-wrap: wrap;
+}
+
+#hero-text h1 {
+  font-size: 26px;
+}
+
+.slideshow-container {
+  margin-left: 6%;
+  align-content: center;
+}
+
+.dot-container {
+  margin-left: 6%;
+}
+
+.text {
+  width: 100%;
+  display: block;
+}
+
+.mySlides {
+  width: 100%;
+}
+
+.slide-numbers, .h-line {
+  display: none;
+}
+
+.text h1 {
+  font-size: 20px;
+  line-height: 100%;
+  margin-left: 30px;
+  letter-spacing: 0;
+}
+
+.text p {
+  font-size: 12px;
+  line-height: normal;
+  margin-left: 30px;
+  margin-right: 15px;
+  padding-bottom: 15px;
+  text-transform: lowercase;
+}
+
+#hero-fact {
+  box-shadow: none;
+  margin-left: 30px;
+  width: 100%;
+  padding: 0;
+}
+
+#hero-fact-bg {
+  background: #ffffff;
+}
+
+#hero-fact-box {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  margin: 0px;
+  height: auto;
+}
+
+#hero-fact-number, #hero-fact-number-text {
+  color: #e10921;
+}
+
+#hero-fact-number-text {
+  padding: 0;
+  margin-top: 90px;
+  visibility: hidden;
+}
+
+#hero-fact-number-text:after {
+  content: '%';
+  visibility: visible;
+  display: flex;
+  margin-top: -90px;
+  font-size: 70px;
+}
+
+#hero-fact-text  {
+  margin: 0;
+}
+
+#hero-fact-text h1 {
+  font-size: 20px;
+  font-family: "Futura T - Book";
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#hero-fact-text p {
+  margin-right: 40px;
+  line-height: normal;
+}
+
+#hero-fact-text .smalltext {
+  font-size: 10px;
+  margin-right: 40px;
+  padding-bottom: 25px;
+}
+
+#register-text {
+  margin: 0 5%;
+}
+
+#register-text h1 {
+  font-size: 20px;
+}
+
+#register-text h2 {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+#register-text p {
+  margin: 0 30px;
+  font-size: 12px;
+}
+
+#my-form {
+  margin: 0;
+}
+
+button {
+  margin: 40px 0;
+}
+
+#discover-more {
+  margin: 0 30px;
+}
+
+#discover-more h1 {
+  font-size: 20px;
+  letter-spacing: normal;
+}
+
+#discover-more h2 {
+  font-size: 20px;
+  margin-top: -20px;
+  letter-spacing: normal;
+}
+
+#discover-more p {
+  margin: 0 10px;
+}
+
+#resource-icons {
+  margin: 0 30px 0 15px;
+  padding-top: 40px;
+}
+
+#first-row, #second-row {
+  padding: 15px;
+  margin: 0;
+  width: 100%;
+}
+
+.grid-display {
+  width: 40%;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+  
+}
+
+#last-image {
+  margin-left: 25%;
+}
+
+#resource-icons h3 {
+  font-size: 14px;
+}
+
+#resource-icons a {
+  font-size: 13px;
+}
+
+}

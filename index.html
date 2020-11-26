@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Test Website</title>
+    
+</head>
+
+<body>
+
+<!-- Header --> <!-- Navigation menu -->
+
+  <header>
+    <span class="logo">
+      <a href=""><img src="images/Bistech_Logo.png" alt="Bistech"></a>
+      <a href=""><img src="images/IBM_partner_logo.png" alt="IBM_Partner"></a>
+      <div id="display-menu" onclick="toggleMenu()"></div>
+    </span>
+
+    <span id="nav-bar"> 
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="problem">THE PROBLEM</a></li>
+        <li><a href="solution">THE SOLUTION</a></li>
+        <li><a href="resources">RESOURCES</a></li>
+        <li><a href="register" class="register-btn">REGISTER NOW</a></li>
+      </ul>
+    </span>
+  </header>  
+
+<!-- Red Background div with first hero text -->
+
+  <div id="red-bg">
+    <div id="hero-text">    
+      <h1>With Predictive customer analytics</h1> 
+      <h2>You can determine your customers needs.</h2>
+       <p>Despite a generic go-to-market approach, many organisations do collect rich sets of customer data via records of sales history, demographics, location, service request logs, product/service usage patterns, survey responses, and more.
+        <br><br>
+          These data sets which organisations already possess present a huge opportunity, as they can be integrated and profiled to personalise customer interactions using the IBM Predictive Customer Analytics platform. In Australia, the solution is delivered by Bistech, your highly certified local IBM Premier Business Partner.</p>
+        <h4>The solution that thinks like a customer… for you.<h4>
+    </div>
+
+<!-- Slideshow -->
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+          <img class="image" src="images/Layer_9.png">
+        <div class="text">
+            <div class="current-slide">
+              <p class="slide-numbers">01 </p> <p class="slide-numbers">02 </p><p class="slide-numbers">03</p> <h2 class="h-line"></h2>
+            </div>
+              <h1>Improve Marketing Performance.</h1>
+              <p class="slide-text">Better response, click throughs and conversion rates with better targeting of customers and segments, reducing churn and increasing retention.</p>
+        </div> 
+      </div>
+      
+      <div class="mySlides fade">
+        <img class="image" src="images/Layer_11.png">
+        <div class="text">
+          <div class="current-slide">
+            <p class="slide-numbers">01 </p> <p class="slide-numbers">02 </p><p class="slide-numbers">03</p> <h2 class="h-line"></h2>
+          </div> 
+            <h1>Increase sales and margin.</h1>
+            <p class="slide-text">Cross campaign optimisation and real time predictive modelling identifies profitable opportunities.</p>
+        </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img class="image" src="images/Layer_10.png">
+        <div class="text">
+          <div class="current-slide">
+            <p class="slide-numbers">01 </p> <p class="slide-numbers">02 </p><p class="slide-numbers">03</p> <h2 class="h-line"></h2>
+          </div> 
+            <h1>Boost customer retention and satisfaction.</h1>
+            <p class="slide-text">Identify and eliminate triggers for customer defection by segment, proactively share customer feedback and initiate service requests across channels/departments, and provide more accurate and relevant offers.</p>
+        </div>
+      </div>
+      
+    </div>
+    <br>
+
+<!-- Buttons for navigating through slides -->
+
+    <div class="dot-container" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div> 
+
+<!-- 94% hero fact -->
+
+  <div id="hero-fact-bg">
+    <div id="hero-fact">
+      <div id="hero-fact-box">
+        <div id="hero-fact-number">94</div>
+        <div id="hero-fact-number-text">percent</div>
+      </div>
+
+      <div id="hero-fact-text">
+        <h1>Did you know:</h1>
+        <p>Nucleus Research reported that 94% of IBM Predictive Analytics customers achieve a positive ROI and average payback in 10.7 months, making it one of the highest ROI scores Nucleus has ever seen.¹</p>
+        <p class="smalltext">
+          1 An IBM SPSS Event: The Predictive Analytics Agenda, http://www-01.ibm.com/software/au/
+          analytics/spss/events/theagenda/why.html, accessed 20 November 2015.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<!-- Register form -->
+
+  <div id="black-bg">
+    <div id="register-text">
+      <h1>Register now to</h1>
+      <h2>Enjoy a free customer Discovery session</h1>
+      <br>
+      <p>For a limited time, Bistech is offering a complimentary, tailored ‘Benefits Assessment’ workshop specific to your organisation’s needs and environment. This custom consultation will help you ascertain the value that can be derived from implementing a Predictive Customer Analytics solution.</p>
+      <h4>Use our contact form to book one today!</h4> 
+    </div>
+    
+    <div id="contact-form">
+      <form id="my-form">
+        <input type="text" placeholder="First Name" name="FirstName" required>
+        <input type="text" placeholder="Last Name" name="LastName" required>
+        <input type="text" placeholder="Company" name="email" required>
+        <input type="text" placeholder="Phone" name="email" required>
+        <input type="text" placeholder="Email" name="email" required>
+        <textarea  placeholder="Message" name="message"></textarea>
+        <button type="submit" class="sign-up-btn">SIGN ME UP!</button>
+      </form>
+    </div>
+  </div>
+
+<!-- Resource center -->
+
+  <div id="resource-bg">
+    <div id="discover-more">
+      <h1>Discover more</h1>
+      <h2>Resource center</h2>
+      <p>We’ve collected a range of customer stories and papers, along with our latest infographic, to help you gain a deeper understanding of Predictive Customer Analytics.</p>
+    </div>
+    <div id="resource-icons">
+      <div id="first-row">
+        <div class="grid-display">
+          <img src="images/Infographic_icon.png" alt="">
+          <h3>Infographic</h3>
+          <p>Know the score on Predictive Customer</p>
+          <a href="">Download</a>
+        </div>
+
+        <div class="grid-display">
+          <img src="images/Infographic_icon.png" alt="">
+          <h3>Infographic</h3>
+          <p>The power of individualised interaction</p>
+          <a href="">Download</a>
+        </div>
+
+        <div class="grid-display">
+          <img src="images/Ebook.png" alt="">
+          <h3>Ebook</h3>
+          <p>Customer Analytics for Dummies</p>
+          <a href="">Download</a>
+        </div>
+
+        <div class="grid-display">
+          <img src="images/Case_study_Icon.png" alt="">
+          <h3>Case Study</h3>
+          <p>Luxoticca</p>
+          <a href="">Download</a>
+        </div>
+      </div>
+
+      <div id="second-row">
+        <div class="grid-display">
+          <img src="images/Case_study_Icon.png" alt="">
+          <h3>Case Study</h3>
+          <p>XO Communications</p>
+          <a href="">Download</a>
+        </div>
+
+        <div class="grid-display">
+          <img src="images/White_paper_Icon.png" alt="">
+          <h3>Whitepaper</h3>
+          <p>Acquire, Grow & Retain Customers</p>
+          <a href="">Download</a>
+        </div>
+
+        <div id="last-image" class="grid-display">
+          <img src="images/White_paper_Icon.png" alt="">
+          <h3>Whitepaper</h3>
+          <p>Multi-faceted predictive analytics in a single solution</p>
+          <a href="">Download</a>
+        </div>
+      </div>
+  </div>
+  
+<!-- Footer -->
+
+  <div class="footer">
+    <p>© Copyright Bistech and IBM 2016</p>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
